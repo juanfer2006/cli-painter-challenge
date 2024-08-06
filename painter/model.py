@@ -15,13 +15,15 @@ class Circle:
         self.center: Point = center
         self.radius: float = radius
 
-    def area(self) ->float:
+    def area(self)->float:
         Area = math.pi(self.radius)**2
         return Area
 
 
-    def draw(self) ->float:
+    def draw(self):
         circle = plt.Circle((self.center.x, self.center.y), self.radius, color="r")
         plt.gca().add_patch(circle)
         plt.axis("scaled")
         plt.show()
+
+    def __str__(self):
